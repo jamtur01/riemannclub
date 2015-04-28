@@ -1,0 +1,9 @@
+public/uploads/*
+db/plinter.db
+db/*
+log/*
+*.gem
+pkg/*
+*.lock
+coverage
+dump.rdb

@@ -30,4 +30,3 @@ License
 
 See LICENSE file.
 
-# riemannclub

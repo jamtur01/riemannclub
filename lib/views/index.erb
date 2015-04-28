@@ -1,0 +1,51 @@
+<div class="span8">
+<br />
+<br />
+
+<% if @results %>
+
+<h3>Results</h3>
+
+<%= "<p class='lead'>" + "Looks like your problem is on line " + @line + ".</p>" %>
+<%= "<p class='lead'>" + @results + "</p>" %>
+
+<div class="form-group">
+      <pre><code class="Clojure"><%= @config %></code></pre>
+</div>
+
+  <p><a href="/">Validate another configuration</a></p>
+
+<% elsif @valid %>
+
+<h3>Results</h3>
+
+<%= "<p class='lead'>" + @valid + "</p>" %>
+
+<p><a href="/">Validate another configuration</a></p>
+
+<% else %>
+
+<div class="hero-unit">
+  <h3>Validate your Riemann configuration</h3>
+  <br />
+
+<form action="/" method="POST" class="form-vertical">
+<fieldset>
+
+<!-- Textarea -->
+<div class="form-group">
+  <div class="col-md-8">
+    <textarea class="form-control" id="config" name="config" rows="20">Your Riemann configuration here.</textarea>
+  </div>
+  <input type="submit">
+</div>
+
+</fieldset>
+</form>
+
+</div>
+
+<% end %>
+
+</div>
+
